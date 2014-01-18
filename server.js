@@ -24,14 +24,14 @@ var api = require('./lib/controllers/api'),
     index = require('./lib/controllers');
 
 // Server Routes
-app.get('/api/topics', api.awesomeThings);
-app.get('/api/posts', api.awesomeThings);
-app.get('/api/comments', api.awesomeThings);
-app.get('/api/votes', api.awesomeThings);
+app.get('/api/topics', api.topics);
+app.get('/api/posts', api.posts);
+app.get('/api/comments', api.comments);
+app.get('/api/votes', api.votes);
 app.post('/api/newPost', api.newPost);
-app.post('/api/newComment', api.newPost);
-app.post('/api/upVotePost', api.newPost);
-app.post('/api/upVoteComment', api.newPost);
+app.post('/api/newComment', api.newComment);
+app.post('/api/upVotePost', api.upVotePost);
+app.post('/api/upVoteComment', api.upVoteComment);
 
 // Angular Routes
 app.get('/partials/*', index.partials);
