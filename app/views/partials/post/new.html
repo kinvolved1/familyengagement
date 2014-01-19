@@ -1,0 +1,41 @@
+<h1>New Post</h1>
+<hr>
+<form role="form" ng-submit="processForm()">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="email" class="form-control" id="name" placeholder="Enter your name" ng-model="formData.createdBy">
+  </div>
+
+  <div class="form-group">
+  <label for="">What topic is your post about? </label>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Parent Conferences
+    </label>
+  </div>
+    <div class="checkbox">
+    <label>
+      <input type="checkbox"> Homework Help
+    </label>
+  </div>
+    <div class="checkbox">
+    <label>
+      <input type="checkbox"> Empowering Families
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Student Interest in School
+    </label>
+  </div>
+ </div>
+  <div class="form-group">
+  <label for="postTitle">Title of Your Post</label>
+  <input type="text" class="form-control" name="postTitle" id="postTitle" placeholder="Your post title" ng-model="formData.title">
+  </div>
+  <div class="form-group">
+  <label for="postDescription">Your Post</label>
+  <textarea class="form-control" name="postDescription" id="postDescription" cols="30" rows="10" ng-model="formData.content"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

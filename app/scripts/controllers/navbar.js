@@ -2,10 +2,7 @@
 
 angular.module('kinvolvedApp')
   .controller('NavbarCtrl', function ($scope, $location) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    },
+    $scope.menu = [
     {
       'title': 'About',
       'link': '#'

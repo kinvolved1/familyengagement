@@ -12,6 +12,10 @@ angular.module('kinvolvedApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/new', {
+        templateUrl: 'partials/post/new',
+        controller: 'NewPostCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
