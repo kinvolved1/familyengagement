@@ -28,13 +28,10 @@
     <!-- Add your site or application content here -->
     <div>
         <div ng-app="kinvolvedApp">
+            <div ng-include="'partials/navbar'"></div>
             <div ng-include="'partials/topics'"></div>
             <div class="outer-wrap">
-                <div ng-include="'partials/navbar'"></div>
                 <div class="main-content" ng-view></div>
-            </div>
-            <div class="right-wrap">
-                placeholder to give parents advice on how to use the site.
             </div>
         </div>
     </div>

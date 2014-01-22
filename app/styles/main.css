@@ -1,7 +1,5 @@
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -15,13 +13,13 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
+  padding-left: 70px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
 }
 
 /* Custom page footer */
@@ -52,38 +50,17 @@ body {
 }
 
 /* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
 .marketing p + h4 {
   margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
 
 
 /** Brad - Left Nav **/
 #fixed-menu{
     background: #1d1d1d;
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 250px;
     z-index: 998;
@@ -95,11 +72,10 @@ body {
 .outer-wrap {
     min-height: 100%;
     position: relative;
-    margin-left: 260px;
-    margin-top: 5px;
+    margin-left: 275px;
 }
 .main-content {
-    width:40%;
+    width:70%;
     float:left;
 }
 .right-wrap {

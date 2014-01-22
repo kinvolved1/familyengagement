@@ -16,6 +16,14 @@ angular.module('kinvolvedApp', [
         templateUrl: 'partials/post/new',
         controller: 'NewPostCtrl'
       })
+      .when('/posts/category/:category', {
+        templateUrl: 'partials/main',
+        controller: 'PostListCtrl'
+      })
+      .when('/post/:postID', {
+        templateUrl: 'partials/post/view',
+        controller: 'ViewPostCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

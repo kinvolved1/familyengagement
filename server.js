@@ -26,11 +26,15 @@ var api = require('./lib/controllers/api'),
 // Server Routes
 app.get('/api/topics', api.topics);
 app.get('/api/posts', api.posts);
+app.get('/api/posts/:category', api.postsByCategory);
+app.get('/api/post/:id', api.post);
+app.get('/api/post/:id/comments', api.postComments);
 app.get('/api/comments', api.comments);
 app.get('/api/votes', api.votes);
 app.post('/api/newPost', api.newPost);
 app.post('/api/newComment', api.newComment);
 app.post('/api/upVotePost', api.upVotePost);
+app.post('/api/downVotePost', api.downVotePost);
 app.post('/api/upVoteComment', api.upVoteComment);
 
 // Angular Routes
