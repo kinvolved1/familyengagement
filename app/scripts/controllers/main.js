@@ -9,7 +9,7 @@ var Kinvolved = angular.module('kinvolvedApp' );
     $http.get('/api/posts/' + $routeParams.category ).success(function(posts) {
       $scope.posts = posts;
     });
-  }).controller('NewPostCtrl', function ($scope, $http) {
+  }).controller('NewPostCtrl', function ($scope, $http, $location) {
     $scope.formData = {};
     $scope.categories = [
      { name: 'Student Interest in School', selected:'false' },
@@ -35,6 +35,8 @@ var Kinvolved = angular.module('kinvolvedApp' );
         })
         .success(function(data) {
             // TODO: Show confirmation, Errors
+            $location.path('/post/' + data._id);
+            $scope.$apply();
         });
     };
   }).controller('ViewPostCtrl', function ($scope, $routeParams, $http) {
