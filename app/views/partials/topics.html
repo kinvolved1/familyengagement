@@ -1,9 +1,9 @@
 <div id="fixed-menu">
     <div class="fixed-content">
         <div class="fixed-content-2">
-            <div class="subnav-container">
+            <div class="subnav-container" ng-controller="TopicNavCtrl">
                 <div ng-repeat="topic in topics">
-                    <a>{{topic.name}}</a>
+                    <a href="/posts/category/{{topic.title}}">{{topic.title}}</a>
                 </div>
             </div>
         </div>

@@ -87,4 +87,15 @@ var Kinvolved = angular.module('kinvolvedApp' );
         $scope.post.voteCount = data[0].score
       });
     }
+  }).controller('TopicNavCtrl', function ($scope, $routeParams, $http) {
+      $http({
+        method  : 'GET',
+        url     : '/api/topics',
+        dataType: 'json',
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+      })
+      .success(function(data) {
+        // TODO: Show confirmation, Errors
+        $scope.topics = data;
+      });
   });
