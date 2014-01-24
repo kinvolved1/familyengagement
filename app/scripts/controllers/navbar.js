@@ -5,11 +5,11 @@ angular.module('kinvolvedApp')
     $scope.menu = [
     {
       'title': 'About',
-      'link': '#'
+      'link': '/learn'
     },
     {
       'title': 'Contact',
-      'link': '#'
+      'link': '/contact'
     }];
 
     $scope.isActive = function(route) {

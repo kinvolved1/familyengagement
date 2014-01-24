@@ -100,4 +100,47 @@ var Kinvolved = angular.module('kinvolvedApp' );
         // TODO: Show confirmation, Errors
         $scope.topics = data;
       });
+  }).controller('UserLoginCtrl', function ($scope, $routeParams, $http) {
+      //$http({
+      //  method  : 'GET',
+      //  url     : '/api/topics',
+      //  dataType: 'json',
+      //  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+      //})
+      //.success(function(data) {
+      //  // TODO: Show confirmation, Errors
+      //  $scope.topics = data;
+      //});
+  }).controller('UserRegisterCtrl', function ($scope, $routeParams, $http) {
+    // process the form
+    $scope.formData = {};
+    $scope.processForm = function() {
+        $http({
+            method  : 'POST',
+            url     : '/api/user/new',
+            data    : $.param($scope.formData),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+        })
+        .success(function(data) {
+            // TODO: Show confirmation, Errors
+            // $location.path('/post/' + data._id);
+            $scope.$apply();
+        });
+    };
+  }).controller('ContactCtrl', function ($scope, $routeParams, $http) {
+    // process the form
+    $scope.formData = {};
+    $scope.processForm = function() {
+        $http({
+            method  : 'POST',
+            url     : '/api/feedback/new',
+            data    : $.param($scope.formData),  // pass in data as strings
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+        })
+        .success(function(data) {
+            // TODO: Show confirmation, Errors
+            // $location.path('/post/' + data._id);
+            $scope.$apply();
+        });
+    };
   });
