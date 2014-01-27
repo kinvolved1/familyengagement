@@ -1,34 +1,34 @@
 <div class="container">
-	<form class="well span8" ng-submit="processForm()">
-        <div class="row">
-            <div class="span3">
-                <label>First Name</label> <input class="span3" placeholder=
-                "Your First Name" type="text"> <label>Last Name</label>
-                <input class="span3" placeholder="Your Last Name" type="text">
-                <label>Email Address</label> <input class="span3" placeholder=
-                "Your email address" type="text"> <label>Subject</label>
-                <select class="span3" id="subject" name="subject">
-                    <option selected value="na">
-                        Choose One:
-                    </option>
-                    <option value="service">
-                        General Customer Service
-                    </option>
-                    <option value="suggestions">
-                        Suggestions
-                    </option>
-                    <option value="product">
-                        Product Support
-                    </option>
-                </select>
-            </div>
-
-            <div class="span5">
-                <label>Message</label>
-                <textarea class="input-xlarge span5" id="message" name="message" rows="10">
-                </textarea>
-            </div><button class="btn btn-primary pull-right" type=
-            "submit">Send</button>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Drop me a line!</h3>
+            <hr>
+            <address>
+                <strong>Email:</strong> <a href="mailto:info@kinvolved.com"> info@kinvolved.com</a><br><br>
+                <strong>Phone:</strong> (555)123-4567
+            </address>
         </div>
-    </form>
+        <div class="col-sm-8 contact-form">
+            <form id="contact" method="post" class="form" role="form" ng-submit="processForm()">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6 form-group">
+                        <input class="form-control" id="name" name="name"
+                               placeholder="Name" type="text" required autofocus ng-model="formData.fromName"/>
+                    </div>
+                    <div class="col-xs-6 col-md-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email"
+                               required ng-model="formData.fromEmail"/>
+                    </div>
+                </div>
+                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"
+                          required ng-model="formData.fromMessage"></textarea>
+                <br />
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 form-group">
+                        <button class="btn btn-primary pull-right" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

@@ -3,12 +3,12 @@
 // Module dependencies.
 var express = require('express'),  
     path = require('path'),
-    fs = require('fs');
+    _ = require('underscore'),
+    fs = require('fs'),
+    config = require('./lib/config/config.js'),
+    db = require('./lib/db/mongo')(config.mongo);
 
 var app = express();
-
-// Connect to database
-var db = require('./lib/db/mongo');
 
 // Bootstrap models
 var modelsPath = path.join(__dirname, 'lib/models');
@@ -17,7 +17,7 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 });
 
 // Express Configuration
-require('./lib/config/express')(app);
+require('./lib/config/express')(app,config);
 
 // Controllers
 var api = require('./lib/controllers/api'),
@@ -50,4 +50,4 @@ app.listen(port, function () {
 });
 
 // Expose app
-exports = module.exports = app;
+module.exports = app;
